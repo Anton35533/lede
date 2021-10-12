@@ -47,12 +47,13 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
           
-      - name: 下载主题
+      - name: 下载第三方插件
         run: |
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
+          git clone https://github.com/xiaorouji/openwrt-passwall.git
 
           df -h
 
@@ -112,13 +113,9 @@ jobs:
 
           # Luci插件选择
           cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-app-argon-config=y
           CONFIG_PACKAGE_luci-app-autoreboot=y
-          CONFIG_PACKAGE_luci-app-diag-core=y
           CONFIG_PACKAGE_luci-app-diskman=y
-          CONFIG_PACKAGE_luci-app-commands=y
           CONFIG_PACKAGE_luci-app-ttyd=y
-          CONFIG_PACKAGE_luci-app-uhttpd=y
           CONFIG_PACKAGE_luci-app-netdata=y
           CONFIG_PACKAGE_luci-app-opkg=y
           CONFIG_PACKAGE_luci-app-passwall=y
@@ -134,6 +131,24 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-infinityfreedom=y
           CONFIG_PACKAGE_luci-theme-argon=y
+          EOF
+          
+          # 取消默认配置
+          cat >> .config <<EOF
+          # CONFIG_PACKAGE_luci-app-accesscontrol is not set
+          # CONFIG_PACKAGE_luci-app-unblockmusic is not set
+          # CONFIG_PACKAGE_luci-app-wol is not set
+          # CONFIG_PACKAGE_luci-app-upnp is not set
+          # CONFIG_PACKAGE_luci-app-uhttpd is not set
+          # CONFIG_PACKAGE_luci-app-mwan3 is not set
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+          # CONFIG_PACKAGE_luci-app-samba is not set
+          # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
+          # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          # CONFIG_PACKAGE_luci-app-zerotier is not set
+          # CONFIG_PACKAGE_luci-app-turboacc is not set
+          # CONFIG_PACKAGE_luci-app-nlbwmon is not set  
           EOF
           
           
