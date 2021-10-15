@@ -126,6 +126,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ddns=y
           CONFIG_PACKAGE_luci-app-filetransfer=y
           CONFIG_PACKAGE_uci-app-arpbind=y
+          CONFIG_PACKAGE_bind-host=y
           EOF
 
 
