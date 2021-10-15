@@ -54,6 +54,7 @@ jobs:
           cd openwrt-packages
           git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
           git clone https://github.com/xiaorouji/openwrt-passwall.git
+          git clone https://github.com/Anton35533/openwrt-packages.git
           
 
           df -h
