@@ -136,7 +136,6 @@ jobs:
           CONFIG_PACKAGE_luci-theme-argon=y
           CONFIG_PACKAGE_luci-theme-atmaterial_new=y
           CONFIG_PACKAGE_luci-theme-edge=y
-          CONFIG_PACKAGE_luci-theme-ifit=y
           CONFIG_PACKAGE_luci-theme-opentomato=y
           CONFIG_PACKAGE_luci-theme-opentomcat=y
           CONFIG_PACKAGE_luci-theme-opentopd=y
