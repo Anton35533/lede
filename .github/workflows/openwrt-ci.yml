@@ -138,7 +138,6 @@ jobs:
           CONFIG_PACKAGE_luci-theme-edge=y
           CONFIG_PACKAGE_luci-theme-opentomato=y
           CONFIG_PACKAGE_luci-theme-opentomcat=y
-          CONFIG_PACKAGE_luci-theme-opentopd=y
           EOF
           
           # 取消默认配置
