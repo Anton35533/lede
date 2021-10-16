@@ -128,6 +128,7 @@ jobs:
           CONFIG_PACKAGE_uci-app-arpbind=y
           CONFIG_PACKAGE_bind-host=y
           CONFIG_PACKAGE_ddnsto=y
+          CONFIG_PACKAGE_smartdns=y
           EOF
 
 
