@@ -55,8 +55,7 @@ jobs:
           git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
           git clone https://github.com/xiaorouji/openwrt-passwall.git
           git clone https://github.com/Anton35533/openwrt-packages.git
-          git clone https://github.com/Anton35533/openwrt-packages/tree/master/ddnsto
-
+          
           df -h
 
       - name: Update feeds
@@ -127,7 +126,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-filetransfer=y
           CONFIG_PACKAGE_uci-app-arpbind=y
           CONFIG_PACKAGE_bind-host=y
-          CONFIG_PACKAGE_ddnsto=y
           CONFIG_PACKAGE_luci-app-smartdns=y
           EOF
 
