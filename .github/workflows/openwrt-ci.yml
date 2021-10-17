@@ -54,10 +54,7 @@ jobs:
           cd openwrt-packages
           git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
           git clone https://github.com/xiaorouji/openwrt-passwall.git
-          git clone https://github.com/pymumu/smartdns.git
-          git clone https://github.com/linkease/nas-packages.git
-          git clone https://github.com/linkease/nas-packages-luci.git
-          
+                    
           
           df -h
 
@@ -129,10 +126,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-filetransfer=y
           CONFIG_PACKAGE_uci-app-arpbind=y
           CONFIG_PACKAGE_bind-host=y
-          CONFIG_PACKAGE_luci-app-smartdns=y
-          CONFIG_PACKAGE_luci-app-ddnsto=y
-          CONFIG_PACKAGE_luci-app-linkease=y
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
+
           EOF
 
 
